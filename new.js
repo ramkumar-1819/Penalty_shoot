@@ -108,7 +108,7 @@ fun =()=>{
      main();
  }
 rand=()=>{
-    return '#'+(Math.random()*1819102).toString(16);
+    return '#'+(Math.random()*1819106).toString(16);
 }
 main=()=>{
    fun();
