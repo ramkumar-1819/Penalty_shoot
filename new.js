@@ -2,7 +2,7 @@
 var score=[0,1];
 var turn;
 var x;
-var y=document.getElementById("roww");
+
 
 //team detail
 var team1={
@@ -39,10 +39,8 @@ var updatetextbutton = () =>{
     if (team1.points.length===5 && team2.points.length===5){
         button.remove();
         res.textContent=team1.score==team2.score?"MATCH DRAW": `${team1.score>team2.score?team1.name : team2.name} wins`;
-        res.style.fontSize="100px";
-        y.remove();
-        control();
-    }
+    }   
+       
     else{
         turn=turn==1?2:1;
         button.textContent = `${turn === 1 ? team1.name: team2.name}'s KICK` ;
@@ -103,16 +101,3 @@ var updateruns=()=>{
 }
 
 
-fun =()=>{
-     document.body.style.background=rand();
-     main();
- }
-rand=()=>{
-    return '#'+(Math.random()*1819106).toString(16);
-}
-main=()=>{
-   fun();
-}
-control=()=>{
-     setInterval(main,200)
-}
